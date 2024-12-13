@@ -41,7 +41,9 @@ class todoController{
             message: 'Todo updated!',
             updatedTodo: this.TODOS[todoIndex]
         })
-    } 
+    } catch (error) {
+        console.log(error.message)
+    }
 
     deleteTodo(req, res){
         const todoId = req.params.id
